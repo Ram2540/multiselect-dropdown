@@ -1,0 +1,23 @@
+.Search {
+    display: block;
+    margin: 0.2rem 0rem;
+    border-radius: 5px;
+    background-color: rgb(250, 251, 252);
+    min-height: 2rem;
+    display: flex;
+    width: 95%;
+}
+
+.SearchInput {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    background-image:none;
+    box-shadow: none;
+    font-weight: bold;
+    color: rgb(126, 126, 126);
+}
+
+.SearchInput:focus {
+    outline: none;
+}

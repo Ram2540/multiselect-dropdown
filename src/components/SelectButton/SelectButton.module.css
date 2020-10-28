@@ -1,0 +1,16 @@
+.SelectButtonBox {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.SelectButtonLabel {
+    color: inherit;
+    font-weight: bold;
+    margin: 2rem 0.2rem;
+    cursor: pointer;
+}
+
+.SelectButtonBox:hover {
+    color: black;
+}
+

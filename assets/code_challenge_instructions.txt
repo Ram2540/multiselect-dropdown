@@ -1,0 +1,44 @@
+++++++++++ Coding Challenge ++++++++++
+
+
+Thanks for working on this coding challenge.
+We appreciate you taking the time to showcase your skills.
+
+Please download the React app from this GIT repo.
+We've setup a basic framework for you to work within.
+Please follow the instructions below and send a GITHUB link or a zip of your project files when completed.
+
+
+__________ Assets __________
+https://share.goabstract.com/81867b88-8702-4cf1-af95-956b2fc66234
+
+
+__________ Expected Architecture __________
+	- This is a React/Redux app
+	- Create a JSON data file that represents the websites listed in the dropdown
+	- Fetch this data and store it in app state
+
+
+__________ Expected UI __________
+	- End result should match the given design
+	- User should be able to scroll vertically the list of dropdown items (if you need to make the box shorter or add more data to showcase this, please do)
+
+
+__________ Expected Functionality __________
+	- When an item is selected, we should add/remove item from the reducer.
+	- When filter button is clicked, we should log all the items that we have stored in redux.
+	- "All Sites" label should change to read how many sites have been selected. (ex: 3 sites selected)
+
+
+__________ Nice to haves (not required) __________
+    - User should be able to filter via search within the dropdown items.
+    - User should be able to select all checkboxes.
+    - User should be able to deselect all checkboxes.
+
+
+__________ Tips __________
+	- Please use fontawesome (https://fontawesome.com/icons?d=gallery&m=free) for the iconography
+	- Code Quality, UI, and UX count heavily!
+
+
+

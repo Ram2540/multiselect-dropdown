@@ -1,0 +1,50 @@
+{
+  "name": "code_challenge_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    "cra-template": "1.0.3",
+    "html-react-parser": "^0.14.0",
+    "lodash.debounce": "^4.0.8",
+    "multiselect-react-dropdown": "^1.6.1",
+    "pluralize": "^8.0.0",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "react-lodash": "^0.1.2",
+    "react-onclickoutside": "^6.9.0",
+    "react-redux": "^7.2.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "redux-batched-actions": "^0.5.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "globals": {
+      "_": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

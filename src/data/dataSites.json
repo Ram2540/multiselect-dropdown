@@ -1,0 +1,260 @@
+{
+    "Sites": [
+        {
+            "id": 1,
+            "name": "website.com"
+        },
+        {
+            "id": 2,
+            "name": "website-two.com"
+        },
+        {
+            "id": 3,
+            "name": "website-three.com"
+        },
+        {
+            "id": 4,
+            "name": "website-four.com"
+        },
+        {
+            "id": 5,
+            "name": "website-five.com"
+        },
+        {
+            "id": 6,
+            "name": "website-six.com"
+        },
+        {
+            "id": 7,
+            "name": "website-seven.com"
+        },
+        {
+            "id": 8,
+            "name": "website-eight.com"
+        },
+        {
+            "id": 9,
+            "name": "website-nine.com"
+        },
+        {
+            "id": 10,
+            "name": "web-blog.com"
+        },
+        {
+            "id": 11,
+            "name": "web-first-blog.com"
+        },
+        {
+            "id": 12,
+            "name": "web-second-blog.com"
+        },
+        {
+            "id": 13,
+            "name": "web-third-blog.com"
+        }
+    ],
+    "Devices": [
+        {
+            "id": 1,
+            "name": "iPhone"
+        },
+        {
+            "id": 2,
+            "name": "iPhone 12"
+        },
+        {
+            "id": 3,
+            "name": "Xperia 5 II A002SO"
+        },
+        {
+            "id": 4,
+            "name": "Xperia 5 II SOG02"
+        },
+        {
+            "id": 5,
+            "name": "Galaxy Note20 Ultra 5G SCG06"
+        },
+        {
+            "id": 6,
+            "name": "Pixel 4a (5G)"
+        },
+        {
+            "id": 7,
+            "name": "Pixel 5"
+        },
+        {
+            "id": 8,
+            "name": "AQUOS zero5G basic A002SH"
+        },
+        {
+            "id": 9,
+            "name": "Raku-Raku SMART PHONE F-42A"
+        },
+        {
+            "id": 10,
+            "name": "iPad 8"
+        },
+        {
+            "id": 11,
+            "name": "GRATINA KYV48"
+        },
+        {
+            "id": 12,
+            "name": "Simple Smartphone 5 A001SH"
+        },
+        {
+            "id": 13,
+            "name": "Pixel 4a"
+        },
+        {
+            "id": 14,
+            "name": "arrows 5G F-51A"
+        },
+        {
+            "id": 15,
+            "name": "Galaxy A41 SC-41A"
+        },
+        {
+            "id": 16,
+            "name": "Xperia 1 II SO-51A"
+        },
+        {
+            "id": 17,
+            "name": "V60 ThinQ 5G L-51A"
+        },
+        {
+            "id": 18,
+            "name": "AQUOS R5G 908SH"
+        },
+        {
+            "id": 19,
+            "name": "Galaxy S20 5G SC-51A"
+        },
+        {
+            "id": 20,
+            "name": "iPad Pro 4G 12.9"
+        },
+        {
+            "id": 21,
+            "name": "DIGNO Keitai3 902KC"
+        },
+        {
+            "id": 22,
+            "name": "AQUOS sense3 plus 901SH"
+        },
+        {
+            "id": 23,
+            "name": "Pixel 4 XL"
+        },
+        {
+            "id": 24,
+            "name": "Galaxy Note10+ SC-01M"
+        },
+        {
+            "id": 25,
+            "name": "iPad mini 5G"
+        }
+    ],
+    "Countries": [
+        {
+            "id": 1,
+            "name": "Austria"
+        },
+        {
+            "id": 2,
+            "name": "Belgium"
+        },
+        {
+            "id": 3,
+            "name": "Cameroon"
+        },
+        {
+            "id": 4,
+            "name": "Dominica"
+        },
+        {
+            "id": 5,
+            "name": "Estonia"
+        },
+        {
+            "id": 6,
+            "name": "Fiji"
+        },
+        {
+            "id": 7,
+            "name": "Honduras"
+        },
+        {
+            "id": 8,
+            "name": "Iceland"
+        },
+        {
+            "id": 9,
+            "name": "Japan"
+        },
+        {
+            "id": 10,
+            "name": "Kenya"
+        },
+        {
+            "id": 11,
+            "name": "Lebanon"
+        },
+        {
+            "id": 12,
+            "name": "Malta"
+        },
+        {
+            "id": 13,
+            "name": "Nicaragua"
+        },
+        {
+            "id": 14,
+            "name": "Orange Free State"
+        },
+        {
+            "id": 15,
+            "name": "Panama"
+        },
+        {
+            "id": 16,
+            "name": "Qatar"
+        },
+        {
+            "id": 17,
+            "name": "Romania"
+        },
+        {
+            "id": 18,
+            "name": "Senegal"
+        },
+        {
+            "id": 19,
+            "name": "Tonga"
+        },
+        {
+            "id": 20,
+            "name": "Senegal"
+        },
+        {
+            "id": 21,
+            "name": "Ukraine"
+        },
+        {
+            "id": 22,
+            "name": "Venezuela"
+        },
+        {
+            "id": 23,
+            "name": "Württemberg"
+        },
+        {
+            "id": 24,
+            "name": "Yemen"
+        },
+        {
+            "id": 25,
+            "name": "Zimbabwe"
+        }
+    ]
+}

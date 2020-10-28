@@ -1,0 +1,42 @@
+.DropdownWrapper {
+	margin: 0.5rem;
+	width: 15rem;
+	min-width: 11rem;
+	position: relative;
+}
+
+.DropdownMain {
+	background: rgb(255, 255, 255);
+	border-radius: 5px;
+	border: 2px solid #ccc;
+	box-shadow: 0px 1px 1px 0px rgb(237, 241, 250);
+	height: 3.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.DropdownMainActive {
+	border: 2px solid rgb(20, 148, 244);
+	}
+
+.LabelMain {
+	display: block;
+	color: #ccc;
+	text-align: center;
+}
+
+.LabelSelected {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(66, 94, 150);
+}
+
+.LabelSelectedFiltered {
+	color: rgb(23,149,244);
+}
+

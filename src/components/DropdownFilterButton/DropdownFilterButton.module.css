@@ -1,0 +1,20 @@
+.ButtonFilter {
+    min-height: 3rem;
+    margin:0.3rem;
+    border-radius: 0.3rem;
+    background-color: rgb(242, 244, 248);
+    align-items: center;
+    justify-content: center;
+    /* cursor: not-allowed; */
+    border: none;
+    color: rgb(204, 212, 226);
+    font-size: 125%;
+    margin-top: auto;
+}
+
+.ButtonFilterActive {
+    cursor: pointer;
+    background-color: rgb(20, 148, 244);
+    color: white;
+}
+
