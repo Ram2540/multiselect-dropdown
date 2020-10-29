@@ -18,7 +18,7 @@ import * as classes from './Dropdown.module.css';
 /* ========== ~~~~~~~~~~ DROPDOWN ~~~~~~~~~~ ========== */
 class DropDown extends Component {
 	constructor(props) {
-		super();
+		super(props);
 
 		let currentIcon;
 		switch (Pluralize.singular(props.dropdownName)) {
@@ -129,10 +129,14 @@ class DropDown extends Component {
 			const filteredOptions = this.state.options
 				.filter(opt =>
 					opt.name.toLowerCase().includes(this.state.searchWord));
-            
+
 			const filteredOptionsBold = filteredOptions.map(o => {
 				const index = o.name.toLowerCase().indexOf(this.state.searchWord);
-				const hilightedName = o.name.slice(0,index)+'<strong>'+o.name.slice(index,index+this.state.searchWord.length)+'</strong>'+o.name.slice(index+this.state.searchWord.length);
+				const hilightedName = o.name.slice(0, index)
+					+ '<strong>'
+					+ o.name.slice(index, index + this.state.searchWord.length)
+					+ '</strong>'
+					+ o.name.slice(index + this.state.searchWord.length);
 				return {
 					...o,
 					//name: o.name.replace(this.state.searchWord, '<strong>' + this.state.searchWord + '</strong>')
@@ -170,7 +174,7 @@ class DropDown extends Component {
 
 		let dropdownMainClasses = [classes.DropdownMain];
 		if (this.state.isOpened) {
-			dropdownMainClasses = [classes.DropdownMain,classes.DropdownMainActive];
+			dropdownMainClasses = [classes.DropdownMain, classes.DropdownMainActive];
 		}
 
 		let dropdownLabelSelected = [classes.LabelSelected];
@@ -219,10 +223,10 @@ const mapDispatchToProps = dispatch => {
 DropDown.propTypes = {
 	dropdownName: PropTypes.string.isRequired,
 	options: PropTypes.arrayOf(PropTypes.shape({
-		id:PropTypes.oneOfType([
+		id: PropTypes.oneOfType([
 			PropTypes.number,
 			PropTypes.string
-		]).isRequired ,
+		]).isRequired,
 		name: PropTypes.string.isRequired
 	})).isRequired
 };

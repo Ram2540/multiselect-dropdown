@@ -7,13 +7,11 @@ import * as classes from './DropdownSearch.module.css';
 
 const dropdownSearch = (props) => {
 
-
     return (<div className={classes.Search}>
-        <FontAwesomeIcon icon={faSearch}
+        <FontAwesomeIcon icon={faSearch} size="lg"
             style={{
                 color: 'rgb(206, 214, 227)',
-                height: '70%',
-                margin: '0.2rem 0.5rem'
+                margin: '0.2rem'
             }}
         />
         <input
@@ -33,7 +31,7 @@ const dropdownSearch = (props) => {
 dropdownSearch.propTypes = {
     placeholder: PropTypes.string,
     searchWordChnaged: PropTypes.func
-} 
+}
 
 
 export default dropdownSearch;

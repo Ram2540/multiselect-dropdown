@@ -14,6 +14,7 @@ const dropdownFilterButton = (props) => {
         <Button className={buttonFilterClasses.join(' ')} disabled={!props.isActive} onClick={props.clicked}>{props.label}</Button>
     )
 }
+
 dropdownFilterButton.propTypes = {
     isActive: PropTypes.bool,
     label: PropTypes.string,

@@ -4,7 +4,6 @@
     margin: 0.2rem 0;
 }
 
-
 .CheckboxItem:hover,
 .CheckboxItemActive {
    color: rgb(23,149,244);

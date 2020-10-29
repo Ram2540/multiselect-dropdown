@@ -3,7 +3,7 @@
 import React from 'react';
 // material
 import DropDown from '../containers/Dropdown/Dropdown';
-import importedData from "../data/dataSites.json";
+import importedData from "../data/data.json";
 // styles
 import './app.css';
 

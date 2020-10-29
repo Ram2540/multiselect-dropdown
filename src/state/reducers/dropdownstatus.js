@@ -13,7 +13,10 @@ const defaultState = {
 const addDropsownState = (state, action) => {
     if (action.dropdownId) {
         const updatedDropdownList = [...state.dropdownList]
-        updatedDropdownList.push({ dropdownId: action.dropdownId, checkedItems: [] });
+        updatedDropdownList.push({
+            dropdownId: action.dropdownId,
+            checkedItems: []
+        });
         const updatedState = {
             ...state,
             dropdownList: updatedDropdownList
