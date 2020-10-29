@@ -2,11 +2,13 @@
   "name": "code_challenge_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ram2540.github.io/multiselect-dropdown/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
     "cra-template": "1.0.3",
+    "gh-pages": "^3.1.0",
     "html-react-parser": "^0.14.0",
     "lodash.debounce": "^4.0.8",
     "multiselect-react-dropdown": "^1.6.1",
@@ -27,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app",
