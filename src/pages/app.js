@@ -18,7 +18,7 @@ const App = (props) => {
     <div className={`app`}>
       {Object.keys(data).map((name, i) => {
         return <DropDown
-          key={i}
+          key={name}
           dropdownName={name}
           options={data[name]}
           />

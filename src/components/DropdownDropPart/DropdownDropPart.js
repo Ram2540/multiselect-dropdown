@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 import DropdownCheckbox from '../DropdownCheckbox/DropdownCheckbox';
 import DropdownSearch from '../DropdownSearch/DropdownSearch';
 import SelectButton from '../SelectButton/SelectButton';
 import DropdownFilterButton from '../DropdownFilterButton/DropdownFilterButton';
-import PropTypes from 'prop-types';
 
 import * as classes from './DropdownDropPart.module.css';
 

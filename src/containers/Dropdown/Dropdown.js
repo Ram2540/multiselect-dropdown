@@ -2,15 +2,16 @@
 // libraries
 import React, { Component } from 'react';
 import Pluralize from 'pluralize';
-import DropdownDropPart from '../../components/DropdownDropPart/DropdownDropPart';
 import { faLink, faTabletAlt, faGlobe, faSortDown, faList } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { connect } from 'react-redux'
 import { throttle } from 'lodash';
-import * as dropdownActions from '../../state/actions/dropdownActions'
 import onClickOutside from "react-onclickoutside";
 import _uniqueId from 'lodash/uniqueId';
 import PropTypes from 'prop-types';
+
+import DropdownDropPart from '../../components/DropdownDropPart/DropdownDropPart';
+import * as dropdownActions from '../../state/actions/dropdownActions'
 // styles
 import * as classes from './Dropdown.module.css';
 
@@ -66,12 +67,12 @@ class DropDown extends Component {
 	}
 
 	handleSelectAll = () => {
-		const updatedOptions = this.state.options.map(opt => { opt.checked = true; return opt; });
+		const updatedOptions = this.getUpdatedOptionsChecked(true);
 		this.updateOptionsState(updatedOptions);
 	}
 
 	handleSelectNone = () => {
-		const updatedOptions = this.state.options.map(opt => { opt.checked = false; return opt; });
+		const updatedOptions = this.getUpdatedOptionsChecked(false);
 		this.updateOptionsState(updatedOptions);
 	}
 
@@ -139,7 +140,6 @@ class DropDown extends Component {
 					+ o.name.slice(index + this.state.searchWord.length);
 				return {
 					...o,
-					//name: o.name.replace(this.state.searchWord, '<strong>' + this.state.searchWord + '</strong>')
 					name: hilightedName
 				};
 			});
@@ -152,9 +152,19 @@ class DropDown extends Component {
 		return this.state.options.filter(opt => opt.checked);
 	}
 
+	getUpdatedOptionsChecked = (checkState) => {
+		return this.state.options.map(opt => {
+			return {
+				...opt,
+				checked: checkState
+			}
+		});
+	}
+
 	componentWillUnmount = () => {
 		this.props.removeDropdownState(this.state.dropdownId);
 	}
+	
 
 	render() {
 		let dropPart = null;
@@ -172,16 +182,15 @@ class DropDown extends Component {
 			/>
 		}
 
-		let dropdownMainClasses = [classes.DropdownMain];
+		const dropdownMainClasses = [classes.DropdownMain];
 		if (this.state.isOpened) {
-			dropdownMainClasses = [classes.DropdownMain, classes.DropdownMainActive];
+			dropdownMainClasses.push(classes.DropdownMainActive);
 		}
 
-		let dropdownLabelSelected = [classes.LabelSelected];
+		const dropdownLabelSelected = [classes.LabelSelected];
 		if (this.state.isFiltered) {
-			dropdownLabelSelected = [classes.LabelSelected, classes.LabelSelectedFiltered];
+			dropdownLabelSelected.push(classes.LabelSelectedFiltered);
 		}
-
 
 		return (
 			<React.Fragment>

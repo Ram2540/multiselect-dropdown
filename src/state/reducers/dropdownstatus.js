@@ -11,7 +11,7 @@ const defaultState = {
 };
 
 const addDropsownState = (state, action) => {
-    if (action.dropdownId) {
+    if (action.dropdownId && !state.dropdownList.find(d => d.dropdownId === action.dropdownId)) {
         const updatedDropdownList = [...state.dropdownList]
         updatedDropdownList.push({
             dropdownId: action.dropdownId,
