@@ -48,8 +48,14 @@ class DropDown extends Component {
 			isFiltered: false,
 			searchWord: null,
 		}
+	}
 
-		props.addDropdownState(this.state.dropdownId);
+	componentDidMount = () => {
+		this.props.addDropdownState(this.state.dropdownId);
+	}
+
+	componentWillUnmount = () => {
+		this.props.removeDropdownState(this.state.dropdownId);
 	}
 
 	toggleList = () => {
@@ -101,15 +107,10 @@ class DropDown extends Component {
 	}
 
 	updateOptionsState = (updatedOptions) => {
-		let updatedIsFilterActive = false;
 		const option = updatedOptions.find(opt => opt.checked === true);
-		if (option) {
-			updatedIsFilterActive = true;
-		}
 		this.setState({
 			options: updatedOptions,
-
-			isFilterActive: updatedIsFilterActive
+			isFilterActive: !!option
 		});
 	}
 
@@ -125,8 +126,7 @@ class DropDown extends Component {
 	}
 
 	getAvalibleOptions = () => {
-		if (this.state.searchWord && this.state.searchWord !== "") {
-
+		if (this.state.searchWord) {
 			const filteredOptions = this.state.options
 				.filter(opt =>
 					opt.name.toLowerCase().includes(this.state.searchWord));
@@ -160,11 +160,6 @@ class DropDown extends Component {
 			}
 		});
 	}
-
-	componentWillUnmount = () => {
-		this.props.removeDropdownState(this.state.dropdownId);
-	}
-	
 
 	render() {
 		let dropPart = null;
