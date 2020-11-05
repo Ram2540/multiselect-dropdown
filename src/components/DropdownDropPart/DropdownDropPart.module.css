@@ -1,7 +1,7 @@
 .DropdownDropPartWrapper {
   background: rgb(255, 255, 255);
   border-radius: 4px;
-  border: 1px solid rgb(236, 240, 247);
+  /* border: 1px solid rgb(236, 240, 247); */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
   height: 488px;
   width: 231px;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   z-index: 100;
   background-color: white;
-  padding: 2px 10px 10px 10px;
+  padding: 2px 10px 8px 11px;
 }
 
 .DropdownDropPart {
@@ -22,8 +22,8 @@
 
 /* width */
 .DropdownDropPart::-webkit-scrollbar {
-    width: 0.3rem;
-    height: 0.3rem;
+    width: 2px;
+    height: 2px;
   }
   
   /* Track */
@@ -33,10 +33,14 @@
   
   /* Handle */
   .DropdownDropPart::-webkit-scrollbar-thumb {
-    background: rgb(20,148,244)
+    background: rgb(20,148,244);
+    border-radius: 1px;
   }
   
   /* Handle on hover */
   .DropdownDropPart::-webkit-scrollbar-thumb:hover {
-    background: rgb(20,148,244)
+    background: rgb(20,148,244);
+    border-radius: 1px;
+    width: 3px;
+    height: 3px;
   }
