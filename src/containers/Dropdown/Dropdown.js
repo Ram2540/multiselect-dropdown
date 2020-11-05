@@ -112,7 +112,7 @@ class DropDown extends Component {
 
 		if (num < updatedOptions.length && num > 0) {
 			const name = num === 1 ? this.state.dropdownName : this.state.dropdownPluralName;
-			selectedLabel = num.toString() + ' ' + name + ' selected';
+			selectedLabel = num.toString() + ' ' + name;
 		}
 		return selectedLabel;
 	}
@@ -180,10 +180,12 @@ class DropDown extends Component {
 			<React.Fragment>
 				<div className={classes.DropdownWrapper}>
 					<div className={this.getClassesDropdownMain().join(' ')} onClick={this.toggleList}>
-						<FontAwesomeIcon
+						<FontAwesomeIcon 
+						    className={classes.DropdownIcon}
 							icon={this.getCurrentIcon()}
-							size="1x"
-							style={{ color: 'rgb(200,200,200)' }} />
+							// size="1x"
+							// style={{ color: 'rgb(200,200,200)' }} 
+							/>
 						<div className={classes.LabelArea}>
 							<label className={classes.LabelMain}>{this.state.dropdownPluralName}</label>
 							<label className={this.getClassesDropdownLabelSelected().join(' ')}>{this.state.selectedValuesLabel}</label>

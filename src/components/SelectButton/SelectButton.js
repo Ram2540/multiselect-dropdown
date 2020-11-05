@@ -4,10 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
 
 import classes from './SelectButton.module.css'
+import  '../../fonts/fonts.css'
 
 const selectButton = (props) => (
      <div className={classes.SelectButtonBox} onClick={props.clicked}>
-          <FontAwesomeIcon icon={props.isThisAllButton ? faPlusCircle : faTimesCircle} />
+          <FontAwesomeIcon 
+          className={classes.SelectButtonIcon}
+          icon={props.isThisAllButton ? faPlusCircle : faTimesCircle} 
+          />
           <label className={classes.SelectButtonLabel}>{props.name}</label>
      </div>
 )

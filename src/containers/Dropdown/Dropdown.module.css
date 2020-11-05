@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,500&display=swap');
-
 .DropdownWrapper {
 	margin: 0.5rem;
 	width: 15rem;
 	min-width: 11rem;
 	position: relative;
 	font-family: Work Sans, sans-serif;
-	letter-spacing: 0.01rem;
 }
 
 .DropdownMain {
@@ -14,11 +11,12 @@
 	border-radius: 5px;
 	border: 2px solid #ccc;
 	box-shadow: 0px 1px 1px 0px rgb(237, 241, 250);
-	height: 3.5rem;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
 	padding: 1rem;
+	height: 56px;
+	width: 232px;
 }
 
 .DropdownMainActive {
@@ -32,20 +30,37 @@
 	overflow: hidden;
 }
 
+.DropdownIcon {
+	color: rgb(200,200,200);
+	font-family: FontAwesome5FreeSolid;
+	font-size: 16px;
+	height: 16px;
+	letter-spacing: 0px;
+	text-align: center;
+	width: 16px;
+}
+
 .LabelMain {
-	display: block;
-	color: rgb(170, 180, 200);
-	font-size: 0.8rem;
+	color: rgba(6, 43, 117, 0.4);
+	font-family: WorkSans-Medium, inherit;
+	font-size: 14px;
+	font-weight: 500;
+	height: 16px;
+	letter-spacing: 0px;
+	width: 35px;
 }
 
 .LabelSelected {
 	display: block;
-	text-align: center;
-	color: rgb(61, 86, 140);
-	font-size: 1.1rem;
+	height: 21px;
+	color: #062b75;
+	font-size: 18px;
+	font-family: Work Sans;
+	font-weight: normal;
+	letter-spacing: 0px;
 }
 
 .LabelSelectedFiltered {
-	color: rgb(23,149,244);
+	color: #1d91eb;
 }
 
