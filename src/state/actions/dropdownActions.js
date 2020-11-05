@@ -19,5 +19,14 @@ export const addItemsToDropdownState = (id, items) => (
     }
 );
 
+export const logStoredItems = (id) => (
+    {
+        type: actionTypes.LOG_STORED_ITEMS,
+        dropdownId: id
+    }
+);
+
+
+
 
 

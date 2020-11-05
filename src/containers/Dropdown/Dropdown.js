@@ -21,31 +21,14 @@ class DropDown extends Component {
 	constructor(props) {
 		super(props);
 
-		let currentIcon;
-		switch (Pluralize.singular(props.dropdownName)) {
-			case 'Country':
-				currentIcon = faGlobe;
-				break;
-			case 'Device':
-				currentIcon = faTabletAlt;
-				break;
-			case 'Site':
-				currentIcon = faLink;
-				break;
-			default:
-				currentIcon = faList;
-		}
-
 		this.state = {
 			dropdownId: _uniqueId('dropdownUID-'),
 			options: props.options,
-			icon: currentIcon,
 			dropdownName: Pluralize.singular(props.dropdownName),
 			dropdownPluralName: Pluralize(props.dropdownName),
 			selectedValuesLabel: 'All ' + Pluralize(props.dropdownName),
 			isOpened: false,
 			isFilterActive: false,
-			isFiltered: false,
 			searchWord: null,
 		}
 	}
@@ -96,29 +79,38 @@ class DropDown extends Component {
 
 	handleFilterButton = () => {
 		this.toggleList();
-		const items = this.getAllCheckedOptions();
-		this.props.addItems(this.state.dropdownId, items);
-
-		const updatedSelectedValuesLabel = this.getSelectedValuesLabel();
-		this.setState({
-			isFiltered: true,
-			selectedValuesLabel: updatedSelectedValuesLabel
-		})
+		this.props.logItems(this.state.dropdownId);
 	}
 
 	updateOptionsState = (updatedOptions) => {
-		const option = updatedOptions.find(opt => opt.checked === true);
+		const option = updatedOptions.find(opt => opt.checked);
+		const updatedSelectedValuesLabel = this.getSelectedValuesLabel(updatedOptions);
+		this.props.addItems(this.state.dropdownId, updatedOptions.filter(opt => opt.checked));
 		this.setState({
 			options: updatedOptions,
-			isFilterActive: !!option
+			isFilterActive: !!option,
+			selectedValuesLabel: updatedSelectedValuesLabel
 		});
 	}
 
-	getSelectedValuesLabel = () => {
-		const num = this.state.options.filter(opt => opt.checked).length;
+	getCurrentIcon = () => {
+		switch (Pluralize.singular(this.state.dropdownName)) {
+			case 'Country':
+				return faGlobe;
+			case 'Device':
+				return faTabletAlt;
+			case 'Site':
+				return faLink;
+			default:
+				return faList;
+		}
+	}
+
+	getSelectedValuesLabel = (updatedOptions) => {
+		const num = updatedOptions.filter(opt => opt.checked).length;
 		let selectedLabel = 'All ' + this.state.dropdownPluralName;
 
-		if (num < this.state.options.length && num > 0) {
+		if (num < updatedOptions.length && num > 0) {
 			const name = num === 1 ? this.state.dropdownName : this.state.dropdownPluralName;
 			selectedLabel = num.toString() + ' ' + name + ' selected';
 		}
@@ -148,10 +140,6 @@ class DropDown extends Component {
 		return this.state.options;
 	}
 
-	getAllCheckedOptions() {
-		return this.state.options.filter(opt => opt.checked);
-	}
-
 	getUpdatedOptionsChecked = (checkState) => {
 		return this.state.options.map(opt => {
 			return {
@@ -161,7 +149,7 @@ class DropDown extends Component {
 		});
 	}
 
-	render() {
+	getDropdownPart = () => {
 		let dropPart = null;
 		if (this.state.isOpened) {
 			const searchLabel = 'Search ' + this.state.dropdownName;
@@ -176,38 +164,33 @@ class DropDown extends Component {
 				fiterButton={this.handleFilterButton}
 			/>
 		}
+		return dropPart;
+	}
 
-		const dropdownMainClasses = [classes.DropdownMain];
-		if (this.state.isOpened) {
-			dropdownMainClasses.push(classes.DropdownMainActive);
-		}
+	getClassesDropdownMain = () => {
+		return [classes.DropdownMain, this.state.isOpened ? classes.DropdownMainActive : null]
+	}
 
-		const dropdownLabelSelected = [classes.LabelSelected];
-		if (this.state.isFiltered) {
-			dropdownLabelSelected.push(classes.LabelSelectedFiltered);
-		}
+	getClassesDropdownLabelSelected = () => {
+		return [classes.LabelSelected, this.state.isFilterActive ? classes.LabelSelectedFiltered : null]
+	}
 
+	render() {
 		return (
 			<React.Fragment>
 				<div className={classes.DropdownWrapper}>
-					<div className={dropdownMainClasses.join(' ')} onClick={this.toggleList}>
-						<div>
-							<FontAwesomeIcon
-								icon={this.state.icon}
-								size="lg"
-								style={{
-									color: 'rgb(200,200,200)',
-								}} />
-						</div>
-						<div>
+					<div className={this.getClassesDropdownMain().join(' ')} onClick={this.toggleList}>
+						<FontAwesomeIcon
+							icon={this.getCurrentIcon()}
+							size="1x"
+							style={{ color: 'rgb(200,200,200)' }} />
+						<div className={classes.LabelArea}>
 							<label className={classes.LabelMain}>{this.state.dropdownPluralName}</label>
-							<label className={dropdownLabelSelected.join(' ')}>{this.state.selectedValuesLabel}</label>
+							<label className={this.getClassesDropdownLabelSelected().join(' ')}>{this.state.selectedValuesLabel}</label>
 						</div>
-						<div>
-							<FontAwesomeIcon icon={faSortDown} />
-						</div>
+						<FontAwesomeIcon icon={faSortDown} />
 					</div>
-					{dropPart}
+					{this.getDropdownPart()}
 				</div>
 			</React.Fragment>
 		)
@@ -220,7 +203,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		addDropdownState: (id) => dispatch(dropdownActions.addDropdownState(id)),
 		removeDropdownState: (id) => dispatch(dropdownActions.removeDropdownState(id)),
-		addItems: (id, items) => dispatch(dropdownActions.addItemsToDropdownState(id, items))
+		addItems: (id, items) => dispatch(dropdownActions.addItemsToDropdownState(id, items)),
+		logItems: (id) => dispatch(dropdownActions.logStoredItems(id))
 	}
 }
 

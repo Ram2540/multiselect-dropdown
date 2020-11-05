@@ -1,6 +1,13 @@
 .CheckboxItem {
     display: flex;
-    margin: 0.2rem 0;
+    margin: 0.5rem 0;
+    color: rgb(66, 94, 150);
+}
+
+.CheckboxItemLabel {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .CheckboxItem:hover,
@@ -8,7 +15,6 @@
    color: rgb(23,149,244);
 }
 
-.CheckboxItemLabel {
-  margin-left: 0.5rem;
-  white-space: nowrap;
+.CheckBoxIcon {
+  background-color: rgb(250, 251, 252);
 }

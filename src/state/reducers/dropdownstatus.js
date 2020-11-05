@@ -41,19 +41,18 @@ const removeDropdownState = (state, action) => {
 
 const addItemsToDropsownState = (state, action) => {
     const updatedDropdownList = state.dropdownList.map(d => d.dropdownId === action.dropdownId ? { dropdownId: action.dropdownId, checkedItems: action.ItemsList } : d);
-    const updatedState = {
-        ...state,
-        dropdownList: updatedDropdownList
-    };
-    console.log('-------------------------------------------------------------------------');
-    console.log('-----All state-----');
-    console.log(updatedState);
-    console.log('-----Current Dropdown Sate-----');
-    console.log(updatedDropdownList.find(d => d.dropdownId === action.dropdownId).checkedItems);
     return {
         ...state,
         dropdownList: [...updatedDropdownList]
     }
+}
+
+const logStoredItems = (state, action) => {
+    console.log('-------------------------------------------------------------------------');
+    console.log('-----All state-----');
+    console.log(state);
+    console.log('-----Current Dropdown Sate-----');
+    console.log(state.dropdownList.find(d => d.dropdownId === action.dropdownId).checkedItems);
 }
 
 // REDUCER
@@ -66,6 +65,9 @@ export const dropdownStatus = (state = defaultState, action) => {
             return addItemsToDropsownState(state, action);
         case actionTypes.REMOVE_DROPDOWN_STATE:
             return removeDropdownState(state, action);
+         case actionTypes.LOG_STORED_ITEMS :
+             logStoredItems(state, action);
+             return state;
         default:
             return state;
     }

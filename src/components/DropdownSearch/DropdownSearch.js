@@ -8,11 +8,10 @@ import * as classes from './DropdownSearch.module.css';
 const dropdownSearch = (props) => {
 
     return (<div className={classes.Search}>
-        <FontAwesomeIcon icon={faSearch} size="lg"
-            style={{
-                color: 'rgb(206, 214, 227)',
-                margin: '0.2rem'
-            }}
+        <FontAwesomeIcon
+            className={classes.SearchIcon}
+            icon={faSearch}
+            size="1x"
         />
         <input
             className={classes.SearchInput}

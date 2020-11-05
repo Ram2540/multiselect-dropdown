@@ -5,10 +5,7 @@ import PropTypes from 'prop-types';
 import * as classes from './DropdownFilterButton.module.css'
 
 const dropdownFilterButton = (props) => {
-    let  buttonFilterClasses = [classes.ButtonFilter];
-    if (props.isActive) {
-        buttonFilterClasses = [classes.ButtonFilter, classes.ButtonFilterActive];
-    }
+    let buttonFilterClasses = [classes.ButtonFilter, props.isActive ? classes.ButtonFilterActive : null];
 
     return (
         <Button className={buttonFilterClasses.join(' ')} disabled={!props.isActive} onClick={props.clicked}>{props.label}</Button>

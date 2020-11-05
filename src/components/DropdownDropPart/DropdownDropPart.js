@@ -23,7 +23,7 @@ const dropDownDropPart = (props) => {
                     placeholder={searchLabel}
                     searchWordChnaged={props.handleSearch}
                 />
-                <SelectButton
+                <SelectButton 
                     name={selectAllLabel}
                     clicked={props.clickSelectAll}
                     isThisAllButton={true}

@@ -5,7 +5,12 @@
     background-color: rgb(250, 251, 252);
     min-height: 2rem;
     display: flex;
-    width: 95%;
+}
+
+.SearchIcon {
+    align-self: center;
+    padding:0.3rem;
+    color: rgb(170, 180, 200);
 }
 
 .SearchInput {
@@ -15,9 +20,24 @@
     background-image:none;
     box-shadow: none;
     font-weight: bold;
-    color: rgb(126, 126, 126);
+    font-size: 1rem;
+    color: rgb(170, 180, 200);
 }
 
 .SearchInput:focus {
     outline: none;
 }
+
+
+.SearchInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(170, 180, 200);
+    opacity: 1; /* Firefox */
+  }
+  
+  .SearchInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(170, 180, 200);
+  }
+  
+  .SearchInput::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(170, 180, 200);
+  }
