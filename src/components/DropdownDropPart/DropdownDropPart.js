@@ -18,11 +18,11 @@ const dropDownDropPart = (props) => {
     const filterLabel = props.filterLabel ?? 'Filter';
     return (
         <div className={classes.DropdownDropPartWrapper}>
-            <div className={classes.DropdownDropPart}>
-                <DropdownSearch
+            <DropdownSearch
                     placeholder={searchLabel}
                     searchWordChnaged={props.handleSearch}
                 />
+            <div className={classes.DropdownDropPart}>
                 <SelectButton 
                     name={selectAllLabel}
                     clicked={props.clickSelectAll}
