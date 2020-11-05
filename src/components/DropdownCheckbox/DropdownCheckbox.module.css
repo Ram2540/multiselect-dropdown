@@ -1,6 +1,6 @@
 .CheckboxItem {
     display: flex;
-    margin: 0.5rem 0;
+    margin: 10px 0;
     color: rgb(6, 43, 117);
     align-items: center;
 }
