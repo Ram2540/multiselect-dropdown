@@ -31,7 +31,6 @@
     outline: none;
 }
 
-
 .SearchInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(170, 180, 200);
     opacity: 1; /* Firefox */

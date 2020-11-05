@@ -15,7 +15,6 @@ import * as dropdownActions from '../../state/actions/dropdownActions'
 // styles
 import * as classes from './Dropdown.module.css';
 
-
 /* ========== ~~~~~~~~~~ DROPDOWN ~~~~~~~~~~ ========== */
 class DropDown extends Component {
 	constructor(props) {
@@ -183,8 +182,6 @@ class DropDown extends Component {
 						<FontAwesomeIcon 
 						    className={classes.DropdownIcon}
 							icon={this.getCurrentIcon()}
-							// size="1x"
-							// style={{ color: 'rgb(200,200,200)' }} 
 							/>
 						<div className={classes.LabelArea}>
 							<label className={classes.LabelMain}>{this.state.dropdownPluralName}</label>
@@ -197,8 +194,6 @@ class DropDown extends Component {
 			</React.Fragment>
 		)
 	}
-
-
 };
 
 const mapDispatchToProps = dispatch => {

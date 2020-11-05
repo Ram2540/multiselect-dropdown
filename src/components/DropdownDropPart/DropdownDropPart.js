@@ -8,8 +8,6 @@ import DropdownFilterButton from '../DropdownFilterButton/DropdownFilterButton';
 
 import * as classes from './DropdownDropPart.module.css';
 
-
-
 const dropDownDropPart = (props) => {
 
     const searchLabel = props.searchLabel ?? 'Search';
