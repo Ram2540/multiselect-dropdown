@@ -16,9 +16,9 @@ const dropdownCheckbox = (props) => {
     return (<div className={dropdownCheckboxItemClasses.join(' ')} onClick={() => props.clicked(props.id)}>
             <FontAwesomeIcon 
             className={[classes.CheckBoxIcon, props.checked ? classes.CheckBoxIconActive : null].join(' ')}
-            aria-hidden="true"
+            // aria-hidden="true"
             icon={props.checked ? faCheckSquare : faSquare}
-            size="lg" 
+            size='lg' 
             />
         <label className={classes.CheckboxItemLabel}>{parse(props.name)}</label>
     </div>

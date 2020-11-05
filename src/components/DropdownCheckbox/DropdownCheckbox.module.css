@@ -8,7 +8,7 @@
 .CheckboxItemLabel {
   margin-left: 0.5rem;
   white-space: nowrap;
-  font-family: WorkSans-Medium, inherit;
+  font-family: WorkSans-Medium, Work Sans;
   font-size: 14px;
   font-weight: 500;
   height: 16px;
@@ -18,12 +18,13 @@
 
 
 .CheckBoxIcon {
-background: rgb(250, 251, 252);
-color: rgb(238, 242, 246);
+  background: rgb(250, 251, 252);
+  color: rgb(238, 242, 246);
+  font-size:24px;
 }
 .CheckBoxIconActive {
   background: rgb(250, 251, 252);
-color: #1494f4;
+  color: #1494f4;
 }
 
 .CheckboxItem:hover,

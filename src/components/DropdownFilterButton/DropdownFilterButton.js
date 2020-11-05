@@ -12,7 +12,6 @@ const dropdownFilterButton = (props) => {
         className={buttonFilterClasses.join(' ')} 
         disabled={!props.isActive} 
         onClick={props.clicked}
-        // style={{fontFamily: 'WorkSans-Medium, Work Sans, inherit'}}
         >{props.label}</Button>
     )
 }
