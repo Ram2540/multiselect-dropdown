@@ -7,9 +7,9 @@ import classes from './SelectButton.module.css'
 
 const selectButton = (props) => (
      <div className={classes.SelectButtonBox} onClick={props.clicked}>
-          <FontAwesomeIcon 
-          className={classes.SelectButtonIcon}
-          icon={props.isThisAllButton ? faPlusCircle : faTimesCircle} 
+          <FontAwesomeIcon
+               className={classes.SelectButtonIcon}
+               icon={props.isThisAllButton ? faPlusCircle : faTimesCircle}
           />
           <label className={classes.SelectButtonLabel}>{props.name}</label>
      </div>

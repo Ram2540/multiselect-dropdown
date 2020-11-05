@@ -8,10 +8,10 @@ const dropdownFilterButton = (props) => {
     let buttonFilterClasses = [classes.ButtonFilter, props.isActive ? classes.ButtonFilterActive : null];
 
     return (
-        <Button 
-        className={buttonFilterClasses.join(' ')} 
-        disabled={!props.isActive} 
-        onClick={props.clicked}
+        <Button
+            className={buttonFilterClasses.join(' ')}
+            disabled={!props.isActive}
+            onClick={props.clicked}
         >{props.label}</Button>
     )
 }

@@ -179,10 +179,10 @@ class DropDown extends Component {
 			<React.Fragment>
 				<div className={classes.DropdownWrapper}>
 					<div className={this.getClassesDropdownMain().join(' ')} onClick={this.toggleList}>
-						<FontAwesomeIcon 
-						    className={classes.DropdownIcon}
+						<FontAwesomeIcon
+							className={classes.DropdownIcon}
 							icon={this.getCurrentIcon()}
-							/>
+						/>
 						<div className={classes.LabelArea}>
 							<label className={classes.LabelMain}>{this.state.dropdownPluralName}</label>
 							<label className={this.getClassesDropdownLabelSelected().join(' ')}>{this.state.selectedValuesLabel}</label>

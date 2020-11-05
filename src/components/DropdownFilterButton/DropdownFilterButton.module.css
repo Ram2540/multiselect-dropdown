@@ -16,6 +16,7 @@
     cursor: pointer;
     background-color: rgb(20, 148, 244);
     color: white;
+    border: none;
 }
 
 .ButtonFilter:active {

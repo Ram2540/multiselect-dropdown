@@ -17,11 +17,11 @@ const dropDownDropPart = (props) => {
     return (
         <div className={classes.DropdownDropPartWrapper}>
             <DropdownSearch
-                    placeholder={searchLabel}
-                    searchWordChnaged={props.handleSearch}
-                />
+                placeholder={searchLabel}
+                searchWordChnaged={props.handleSearch}
+            />
             <div className={classes.DropdownDropPart}>
-                <SelectButton 
+                <SelectButton
                     name={selectAllLabel}
                     clicked={props.clickSelectAll}
                     isThisAllButton={true}
