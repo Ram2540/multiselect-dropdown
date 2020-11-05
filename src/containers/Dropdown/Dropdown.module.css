@@ -5,7 +5,8 @@
 	width: 15rem;
 	min-width: 11rem;
 	position: relative;
-	font-family: Work Sans, sans-serif
+	font-family: Work Sans, sans-serif;
+	letter-spacing: 0.01rem;
 }
 
 .DropdownMain {
