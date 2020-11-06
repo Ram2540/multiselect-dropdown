@@ -14,6 +14,7 @@
 }
 
 .DropdownDropPart {
+    margin-top:4px;
     overflow-y :scroll;
     margin-bottom: 11px;
     height:100%;
@@ -34,14 +35,14 @@
   .DropdownDropPart::-webkit-scrollbar-thumb {
     background: rgb(20,148,244);
     border: 3px solid rgb(20,148,244);
-    border-radius: 1px;
+    /* border-radius: 1px; */
   }
   
   /* Handle on hover */
   .DropdownDropPart::-webkit-scrollbar-thumb:hover {
     background: rgb(20,148,244);
     border: 3px solid rgb(20,148,244);
-    border-radius: 1px;
+    /* border-radius: 1px; */
   }
 
   .DropdownDropPart {

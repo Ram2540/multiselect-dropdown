@@ -10,6 +10,7 @@
     letter-spacing: 0px;
     text-align: center;
     padding: 0;
+    border-radius: 4px;
 }
 
 .ButtonFilterActive {
