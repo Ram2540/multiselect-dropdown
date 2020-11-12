@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import * as classes from './DropdownFilterButton.module.css'
 
 const dropdownFilterButton = (props) => {
-    let buttonFilterClasses = [classes.ButtonFilter, props.isActive ? classes.ButtonFilterActive : null];
+    const buttonFilterClasses = [classes.ButtonFilter, props.isActive ? classes.ButtonFilterActive : null];
 
     return (
         <Button

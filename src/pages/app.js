@@ -16,7 +16,7 @@ const App = (props) => {
 
   return (
     <div className={`app`}>
-      {Object.keys(data).map((name, i) => {
+      {Object.keys(data).map((name) => {
         return <DropDown
           key={name}
           dropdownName={name}
